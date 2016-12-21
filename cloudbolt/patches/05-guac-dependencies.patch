@@ -1,0 +1,4 @@
+19c19
+<     if ! yum --nogpgcheck -y localinstall *.rpm  2>&1 ; then
+---
+>     if ! yum --nogpgcheck --skip-broken -y localinstall *.rpm  2>&1 ; then
