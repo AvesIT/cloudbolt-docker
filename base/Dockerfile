@@ -16,4 +16,9 @@ RUN yum install -y \
     gcc-c++ \
     automake \
     memcached \
-    libaio
+    libaio \
+    libX11 \
+    libpng-devel \
+    cairo-devel \
+    readline-devel \
+    crontabs
