@@ -1,0 +1,4 @@
+23c23
+<     if ! yum --nogpgcheck -y --disablerepo='*' localinstall *.rpm  2>&1 ; then
+---
+>     if ! yum --nogpgcheck --skip-broken -y --disablerepo='*' localinstall *.rpm  2>&1 ; then
