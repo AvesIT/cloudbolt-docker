@@ -1,53 +1,19 @@
-FROM centos:6.6
-MAINTAINER Rick Kilcoyne <rick@cloudbolt.io>
+FROM centos:6.8
+LABEL maintainer="Nils Vogels <n.vogels@aves-it.nl>"
 RUN yum install -y \
-   patch \
-   tar \
-   wget \
-   cairo-devel \
-   compat-gcc-34 \
-   compat-libtermcap \
-   crontabs \
-   e2fsprogs-devel \
-   freetype \
-   freetype-devel \
-   gcc \
-   gcc-c++ \
-   glib2 \
-   glib2-devel \
-   httpd \
-   libart_lgpl-devel \
-   libevent \
-   libpng-devel \
-   libuuid-devel \
-   libxml2 \
-   libxml2-devel \
-   libxslt \
-   libxslt-devel \
-   make \
-   mod_ssl \
-   ncurses \
-   ncurses-devel \
-   ncurses-static \
-   ncurses-term \
-   openldap \
-   openldap-devel \
-   openssl \
-   openssl-devel \
-   pango \
-   pango-devel \
-   perl \
-   perl-CPAN \
-   perl-Digest-SHA \
-   perl-ExtUtils-MakeMaker \
-   python-imaging \
-   readline \
-   readline-devel \
-   screen \
-   unzip \
-   memcached \
-   python \
-   python-devel \
-   libjpeg-turbo \
-   libjpeg-turbo-devel \
-   openssh-clients
+    wget \
+    libxslt-devel \
+    openldap-devel \
+    perl \
+    pkgconfig \
+    db4-devel \
+    system-logos \
+    perl \
+    initscripts \
+    libxslt \
+    mailcap \
+    gcc \
+    gcc-c++ \
+    automake \
+    memcached \
+    libaio
