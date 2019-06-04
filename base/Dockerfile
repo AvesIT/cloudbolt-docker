@@ -21,4 +21,7 @@ RUN yum install -y \
     libpng-devel \
     cairo-devel \
     readline-devel \
-    crontabs
+    crontabs \
+    patch && \
+    yum clean all && \
+    rm -rf /var/cache/yum

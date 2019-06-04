@@ -9,12 +9,15 @@ ADD patches/05-guac-dependencies.patch .
 RUN \
   wget http://downloads.cloudbolt.io/${VERSION}/cloudbolt_installer_${VERSION}.tgz -O installer.tgz && \
   tar xf installer.tgz && \
-  rm -f installer.tgz
-
-RUN \
+  rm -f installer.tgz && \
   cd cloudbolt_installer_* && \
-  patch 05-guac-dependencies.patch/cb.sh ../05-guac-dependencies.patch
-  ./install_cloudbolt.sh force
+  patch 05-guac-dependencies/cb.sh ../05-guac-dependencies.patch && \
+  ./install_cloudbolt.sh force && \
+  cd .. && \
+  rm -rf cloudbolt_installer_* && \
+  yum update -y && \
+  yum clean all && \
+  rm -rf /var/cache/yum
 
 EXPOSE 80 443
 
